@@ -21,7 +21,7 @@ namespace TrackerUI
             InitializeComponent();
         }
 
-        private void createPrizeButton_Click(object sender, EventArgs e)
+        private void CreatePrizeButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
@@ -48,12 +48,9 @@ namespace TrackerUI
         private bool ValidateForm()
         {
             bool output = true;
-            int placeNumber = 0;
-            decimal prizeAmount = 0;
-            double prizePercentage = 0;
-            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
-            bool prizeAmountValidNumber = decimal.TryParse(placeNumberValue.Text, out prizeAmount);
-            bool prizePercentageValidNumber = double.TryParse(placeNumberValue.Text, out prizePercentage);
+            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out int placeNumber);
+            bool prizeAmountValidNumber = decimal.TryParse(placeNumberValue.Text, out decimal prizeAmount);
+            bool prizePercentageValidNumber = double.TryParse(placeNumberValue.Text, out double prizePercentage);
 
             if (!placeNumberValidNumber)
             {
